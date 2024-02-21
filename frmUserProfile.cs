@@ -12,9 +12,22 @@ namespace DBPROJECT
 {
     public partial class frmUserProfile : Form
     {
+        long iduser;
+        String longiname;
+        public frmUserProfile(long liduser, String lname)
+        {
+            InitializeComponent();
+            this.iduser = liduser;
+            this.longiname = lname;
+        }
         public frmUserProfile()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
