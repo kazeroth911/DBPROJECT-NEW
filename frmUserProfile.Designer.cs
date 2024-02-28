@@ -49,10 +49,10 @@ namespace DBPROJECT
             this.txtLoginName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpPhoto = new System.Windows.Forms.GroupBox();
-            this.pictBoxUser = new System.Windows.Forms.PictureBox();
+            this.picBoxUser = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.grpPhoto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictBoxUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoadPhoto
@@ -68,6 +68,7 @@ namespace DBPROJECT
             this.btnLoadPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoadPhoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadPhoto.UseVisualStyleBackColor = true;
+            this.btnLoadPhoto.Click += new System.EventHandler(this.btnLoadPhoto_Click);
             // 
             // btnClear
             // 
@@ -82,6 +83,7 @@ namespace DBPROJECT
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // groupBox1
             // 
@@ -268,7 +270,7 @@ namespace DBPROJECT
             // 
             // grpPhoto
             // 
-            this.grpPhoto.Controls.Add(this.pictBoxUser);
+            this.grpPhoto.Controls.Add(this.picBoxUser);
             this.grpPhoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.grpPhoto.Location = new System.Drawing.Point(67, 12);
             this.grpPhoto.Name = "grpPhoto";
@@ -276,15 +278,15 @@ namespace DBPROJECT
             this.grpPhoto.TabIndex = 35;
             this.grpPhoto.TabStop = false;
             // 
-            // pictBoxUser
+            // picBoxUser
             // 
-            this.pictBoxUser.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictBoxUser.ErrorImage")));
-            this.pictBoxUser.Image = ((System.Drawing.Image)(resources.GetObject("pictBoxUser.Image")));
-            this.pictBoxUser.Location = new System.Drawing.Point(3, 16);
-            this.pictBoxUser.Name = "pictBoxUser";
-            this.pictBoxUser.Size = new System.Drawing.Size(265, 160);
-            this.pictBoxUser.TabIndex = 0;
-            this.pictBoxUser.TabStop = false;
+            this.picBoxUser.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBoxUser.ErrorImage")));
+            this.picBoxUser.Image = ((System.Drawing.Image)(resources.GetObject("picBoxUser.Image")));
+            this.picBoxUser.Location = new System.Drawing.Point(3, 16);
+            this.picBoxUser.Name = "picBoxUser";
+            this.picBoxUser.Size = new System.Drawing.Size(265, 160);
+            this.picBoxUser.TabIndex = 0;
+            this.picBoxUser.TabStop = false;
             // 
             // frmUserProfile
             // 
@@ -297,11 +299,13 @@ namespace DBPROJECT
             this.Controls.Add(this.btnLoadPhoto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "User Profile";
+            this.Load += new System.EventHandler(this.frmUserProfile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.grpPhoto.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictBoxUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,6 +330,6 @@ namespace DBPROJECT
         private System.Windows.Forms.TextBox txtLoginName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpPhoto;
-        private System.Windows.Forms.PictureBox pictBoxUser;
+        private System.Windows.Forms.PictureBox picBoxUser;
     }
 }

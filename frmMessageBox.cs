@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DBPROJECT
 {
@@ -66,6 +67,11 @@ namespace DBPROJECT
             }
             return dlgResult;
 
+        }
+
+        internal static void Show(string v1, string v2, MessageBoxButtons oK)
+        {
+            throw new NotImplementedException();
         }
     }
 }
