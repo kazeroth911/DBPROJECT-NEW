@@ -88,6 +88,7 @@ namespace DBPROJECT
         {
             this.frmUserProfile_LoadUserData();
             this.frmUserProfile_GetPhotofromField();
+            this.btnSave.Enabled = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -290,6 +291,11 @@ namespace DBPROJECT
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             this.frmUserProfile_RefreshUser();
+        }
+
+        private void EnableSaveButton(object sender, KeyPressEventArgs e)
+        {
+            this.btnSave.Enabled = true;
         }
     }
 }

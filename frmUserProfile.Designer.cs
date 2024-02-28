@@ -140,6 +140,7 @@ namespace DBPROJECT
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // btnChangePwd
             // 
@@ -167,6 +168,7 @@ namespace DBPROJECT
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(100, 21);
             this.cbxGender.TabIndex = 31;
+            this.cbxGender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // pkrBirthdate
             // 
@@ -175,6 +177,7 @@ namespace DBPROJECT
             this.pkrBirthdate.Name = "pkrBirthdate";
             this.pkrBirthdate.Size = new System.Drawing.Size(100, 20);
             this.pkrBirthdate.TabIndex = 30;
+            this.pkrBirthdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label6
             // 
@@ -204,6 +207,7 @@ namespace DBPROJECT
             this.txtSMTPport.Name = "txtSMTPport";
             this.txtSMTPport.Size = new System.Drawing.Size(99, 20);
             this.txtSMTPport.TabIndex = 25;
+            this.txtSMTPport.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label4
             // 
@@ -222,6 +226,7 @@ namespace DBPROJECT
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(301, 20);
             this.txtEmail.TabIndex = 23;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label3
             // 
@@ -240,6 +245,7 @@ namespace DBPROJECT
             this.txtSMTPHOST.Name = "txtSMTPHOST";
             this.txtSMTPHOST.Size = new System.Drawing.Size(301, 20);
             this.txtSMTPHOST.TabIndex = 21;
+            this.txtSMTPHOST.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label2
             // 
