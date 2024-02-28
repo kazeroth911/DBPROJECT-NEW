@@ -123,7 +123,7 @@ namespace DBPROJECT
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.button3_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnSave
             // 
@@ -139,6 +139,7 @@ namespace DBPROJECT
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnChangePwd
             // 
@@ -154,6 +155,7 @@ namespace DBPROJECT
             this.btnChangePwd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChangePwd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangePwd.UseVisualStyleBackColor = true;
+            this.btnChangePwd.Click += new System.EventHandler(this.btnChangePwd_Click);
             // 
             // cbxGender
             // 
@@ -252,8 +254,11 @@ namespace DBPROJECT
             // 
             // txtLoginName
             // 
+            this.txtLoginName.AcceptsReturn = true;
+            this.txtLoginName.AcceptsTab = true;
             this.txtLoginName.Location = new System.Drawing.Point(110, 26);
             this.txtLoginName.Name = "txtLoginName";
+            this.txtLoginName.ReadOnly = true;
             this.txtLoginName.Size = new System.Drawing.Size(301, 20);
             this.txtLoginName.TabIndex = 19;
             // 
@@ -297,10 +302,14 @@ namespace DBPROJECT
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnLoadPhoto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUserProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "User Profile";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUserProfile_FormClosing);
             this.Load += new System.EventHandler(this.frmUserProfile_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
