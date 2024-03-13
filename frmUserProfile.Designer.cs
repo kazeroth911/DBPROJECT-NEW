@@ -69,6 +69,7 @@ namespace DBPROJECT
             this.btnLoadPhoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadPhoto.UseVisualStyleBackColor = true;
             this.btnLoadPhoto.Click += new System.EventHandler(this.btnLoadPhoto_Click);
+            this.btnLoadPhoto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // btnClear
             // 
@@ -168,7 +169,7 @@ namespace DBPROJECT
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(100, 21);
             this.cbxGender.TabIndex = 31;
-            this.cbxGender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
+            this.cbxGender.TextChanged += new System.EventHandler(this.EnableSaveButton);
             // 
             // pkrBirthdate
             // 
@@ -177,7 +178,7 @@ namespace DBPROJECT
             this.pkrBirthdate.Name = "pkrBirthdate";
             this.pkrBirthdate.Size = new System.Drawing.Size(100, 20);
             this.pkrBirthdate.TabIndex = 30;
-            this.pkrBirthdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
+            this.pkrBirthdate.ValueChanged += new System.EventHandler(this.EnableSaveButton);
             // 
             // label6
             // 
@@ -313,7 +314,7 @@ namespace DBPROJECT
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUserProfile";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Profile";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUserProfile_FormClosing);
             this.Load += new System.EventHandler(this.frmUserProfile_Load);

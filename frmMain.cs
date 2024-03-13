@@ -15,11 +15,10 @@ namespace DBPROJECT
     {
         
         frmLogin fm;   // login form
+
         public frmMain()
         {
             InitializeComponent();
-
-
         }
        
         private void btnExit_Click(object sender, EventArgs e)
@@ -71,7 +70,7 @@ namespace DBPROJECT
             ChangePasswordfrm = new frmChangePassword(Globals.gIdUser, Globals.gLoginName);
             ChangePasswordfrm.FormClosed += ChangePasswordfrm_FormClosed;
 
-            ChangePasswordfrm.ShowDialog();
+            ChangePasswordfrm.Show();
         }
 
         private frmUserProfile UserProfilefrm;
@@ -79,8 +78,9 @@ namespace DBPROJECT
         private void editUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UserProfilefrm = new frmUserProfile(Globals.gIdUser, Globals.gLoginName);
+            UserProfilefrm.MdiParent = this;
             UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
-            UserProfilefrm.ShowDialog();
+            UserProfilefrm.Show();
         }
 
         private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)
@@ -88,7 +88,23 @@ namespace DBPROJECT
 
             UserProfilefrm.Dispose();
         }
-        
+
+        frmUser Userfrm;
+
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Userfrm = new frmUser();
+            Userfrm.FormClosed += Userfrm_FormClosed;
+            Userfrm.MdiParent = this;
+            Userfrm.Show();
+        }
+
+        private void Userfrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Userfrm.Dispose();
+        }
+
 
 
         /*
